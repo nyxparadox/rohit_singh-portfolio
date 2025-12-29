@@ -1,0 +1,147 @@
+.hero {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: var(--neon-green);
+}
+
+.hero p {
+  margin-top: 16px;
+  max-width: 420px;
+  color: var(--text-muted);
+}
+
+/* IMAGE */
+.hero-img {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin-left: auto;
+}
+
+.hero-img::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--neon-green), var(--neon-blue));
+  animation: rotate 6s linear infinite;
+  z-index: -1;
+}
+
+.hero-img img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-img {
+    margin: auto;
+  }
+}
+
+
+
+
+
+
+/* ================= HERO ANIMATIONS ================= */
+
+/* Smooth entrance */
+.hero {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFade 1.2s ease forwards;
+}
+
+@keyframes heroFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating text animation */
+.hero-content h1 {
+  animation: floatText 4s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* HERO IMAGE CONTAINER */
+.hero-image {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin-left: auto;
+  perspective: 1000px;
+}
+
+/* IMAGE */
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.1s linear;
+}
+
+/* GLOW RING */
+.hero-img-ring {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    var(--neon-green),
+    var(--neon-blue),
+    var(--neon-green)
+  );
+  filter: blur(12px);
+  animation: pulseGlow 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero-image {
+    margin: 40px auto 0;
+  }
+}

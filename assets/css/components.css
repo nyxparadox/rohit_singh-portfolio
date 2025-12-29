@@ -1,0 +1,42 @@
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.logo {
+  color: var(--neon-green);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.navbar nav a {
+  margin-left: 24px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: var(--neon-green);
+  opacity: 1;
+}
+
+/* BUTTON */
+.btn-primary {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 28px;
+  background: var(--neon-green);
+  color: #000;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: var(--glow-green);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+}

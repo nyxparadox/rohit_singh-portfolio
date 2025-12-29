@@ -1,0 +1,16 @@
+:root {
+  /* COLORS */
+  --bg-main: #050607;
+  --bg-card: #0b0f12;
+  --neon-green: #00ff9c;
+  --neon-blue: #00d4ff;
+  --text-main: #e5e5e5;
+  --text-muted: #9aa0a6;
+
+  /* FONTS */
+  --font-main: 'Inter', system-ui, sans-serif;
+
+  /* EFFECTS */
+  --glow-green: 0 0 15px rgba(0, 255, 156, 0.6);
+  --radius: 16px;
+}
