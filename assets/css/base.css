@@ -11,6 +11,15 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3 {
+  letter-spacing: -0.3px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+
 a {
   text-decoration: none;
   color: inherit;
@@ -25,4 +34,9 @@ img {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }

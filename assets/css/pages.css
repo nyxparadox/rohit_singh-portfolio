@@ -4,6 +4,7 @@
   grid-template-columns: 1.1fr 1fr;
   align-items: center;
   gap: 40px;
+  
 }
 
 .hero h1 {
@@ -20,6 +21,51 @@
   max-width: 420px;
   color: var(--text-muted);
 }
+
+
+
+section {
+  scroll-margin-top: 120px;
+}
+
+section {
+  padding: 120px 0;
+}
+
+.hero {
+  padding: 80px 0;
+}
+
+
+
+
+/* ===== FINAL HERO TEXT STYLES ===== */
+
+.hero-name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-role {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--accent-blue);
+  margin-bottom: 18px;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+
+
+
+
 
 /* IMAGE */
 .hero-img {
@@ -112,21 +158,35 @@
   transition: transform 0.1s linear;
 }
 
-/* GLOW RING */
+
+
+
 .hero-img-ring {
   position: absolute;
-  inset: -12px;
+  inset: -14px;
   border-radius: 50%;
-  background: linear-gradient(
-    45deg,
-    var(--neon-green),
-    var(--neon-blue),
-    var(--neon-green)
+  background: conic-gradient(
+    from 0deg,
+    var(--accent-blue),
+    var(--accent-red),
+    var(--accent-blue)
   );
-  filter: blur(12px);
-  animation: pulseGlow 3s ease-in-out infinite;
+  filter: blur(10px);
+  opacity: 0.9;
+  animation: energySpin 6s linear infinite;
   z-index: 1;
 }
+
+@keyframes energySpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
 
 @keyframes pulseGlow {
   0%, 100% {
@@ -143,5 +203,318 @@
 @media (max-width: 900px) {
   .hero-image {
     margin: 40px auto 0;
+  }
+}
+
+
+
+
+
+.hero-image::before,
+.hero-image::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.hero-image::before {
+  background: var(--accent-blue);
+  left: -40px;
+  top: 60px;
+}
+
+.hero-image::after {
+  background: var(--accent-red);
+  right: -40px;
+  bottom: 60px;
+}
+
+
+
+/* ================= SKILLS SECTION ================= */
+
+.skills-section {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 24px;
+}
+
+.skill-card {
+  padding: 18px 0;
+  background: var(--bg-card);
+  border-radius: 16px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Hover glow */
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: var(--glow-blue);
+  border-color: var(--accent-blue);
+}
+
+
+
+/* ================= PROJECTS SECTION ================= */
+
+.projects-section {
+  /* margin-top: 140px; */
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 50px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 28px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.35s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.project-tech {
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: var(--glow-blue);
+  border-color: var(--accent-blue);
+}
+
+/* Highlight MelodySync */
+.project-card.highlight {
+  border-color: var(--accent-red);
+}
+
+.project-card.highlight:hover {
+  box-shadow: var(--glow-red);
+}
+
+
+
+.project-links {
+  margin-top: 18px;
+  display: flex;
+  gap: 16px;
+}
+
+.project-links a {
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+/* GitHub button */
+.project-links a:first-child:hover {
+  background: var(--accent-blue);
+  color: #000;
+  box-shadow: var(--glow-blue);
+  border-color: var(--accent-blue);
+}
+
+/* Details button */
+.project-links a:last-child:hover {
+  background: var(--accent-red);
+  color: #000;
+  box-shadow: var(--glow-red);
+  border-color: var(--accent-red);
+}
+
+
+
+
+
+/* ================= PROJECTS PAGE ================= */
+
+.projects-page {
+  margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.page-title {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+
+.page-subtitle {
+  max-width: 700px;
+  color: var(--text-muted);
+  margin-bottom: 80px;
+}
+
+.project-detail {
+  margin-bottom: 100px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.project-detail h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.project-tagline {
+  display: block;
+  color: var(--accent-blue);
+  margin-bottom: 24px;
+}
+
+.project-detail h3 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.project-detail ul {
+  margin-left: 18px;
+  color: var(--text-muted);
+}
+
+.project-detail ul li {
+  margin-bottom: 6px;
+}
+
+.tech-stack {
+  color: var(--accent-blue);
+  font-size: 0.9rem;
+}
+
+/* Highlight MelodySync */
+.highlight-project {
+  border-left: 4px solid var(--accent-red);
+  padding-left: 24px;
+}
+
+
+
+
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+  /* margin-top: 140px; */
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.contact-subtitle {
+  max-width: 620px;
+  margin: 0 auto 50px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  padding: 26px;
+  border-radius: 20px;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.35s ease;
+  display: block;
+}
+
+.contact-card span {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.contact-card small {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Hover Effects */
+.contact-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: var(--glow-blue);
+  border-color: var(--accent-blue);
+}
+
+/* Accent variation for Instagram */
+.contact-card:last-child:hover {
+  box-shadow: var(--glow-red);
+  border-color: var(--accent-red);
+}
+
+
+
+.skill-card,
+.project-card,
+.contact-card {
+  will-change: transform;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .hero-name {
+    font-size: 2.2rem;
+  }
+
+  .hero-role {
+    font-size: 1.3rem;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
   }
 }

@@ -4,88 +4,133 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ===== SEO ===== -->
-  <meta name="description" content="Personal Portfolio Website of MASTER - Full Stack Developer" />
-  <meta name="keywords" content="portfolio, full stack developer, web developer" />
+  <title>Rohit Singh | Portfolio</title>
 
-  <title>MASTER | Portfolio</title>
-
-  <!-- ===== CSS FILES ===== -->
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/variables.css" />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/components.css" />
   <link rel="stylesheet" href="assets/css/pages.css" />
-
-  <!-- ===== GOOGLE FONT (OPTIONAL) ===== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- ================= NAVBAR ================= -->
   <header class="container navbar">
-    <div class="logo">
-      NYX
-      <!-- 🔁 CHANGE YOUR BRAND NAME HERE -->
-    </div>
-
+    <div class="logo">nyxparadox</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">Skills</a>
+      <a href="index.html" class="active">Home</a>
       <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- ================= HERO SECTION ================= -->
+  <!-- ================= HERO ================= -->
   <main class="container">
     <section class="hero">
 
-      <!-- ===== LEFT CONTENT ===== -->
+      <!-- LEFT -->
       <div class="hero-content">
+        <h1 class="hero-name">Hi, I’m Rohit Singh</h1>
 
-        <h1>
-          <span>Full-Stack</span><br />
-          Embedded Engineer
-          <!-- Developer                      have to remove this -->
-          <!-- 🔁 CHANGE YOUR ROLE -->
-        </h1>
+        <h2 class="hero-role">
+          ECE Engineer | Embedded • CV • Mobile Apps
+        </h2>
 
-        <p>
-          Engineers are the wizards who bring imagination to life.
-          <!-- 🔁 CHANGE YOUR DESCRIPTION -->
+        <p class="hero-tagline">
+          From circuits to code — I build smart embedded solutions
+          using electronics, vision, and modern software.
         </p>
 
-        <a href="contact.html" class="btn-primary">
-          Let’s Connect
-          <!-- 🔁 CHANGE BUTTON TEXT OR LINK -->
+        <a href="projects.html" class="btn-primary">
+          View Projects
         </a>
-
       </div>
 
-      <!-- ===== RIGHT IMAGE ===== -->
+      <!-- RIGHT -->
       <div class="hero-image">
         <div class="hero-img-ring"></div>
-
-        <img
-          src="assets/images/hero/rohit_singh.png"
-          alt="Profile Photo"
-        />
-        <!-- 🔁 REPLACE IMAGE FILE ONLY -->
+        <img src="assets/images/hero/rohit_singh.png" alt="Rohit Singh" />
       </div>
 
     </section>
   </main>
 
-  <!-- ================= FOOTER (OPTIONAL) ================= -->
+  <!-- ================= SKILLS ================= -->
+  <section class="skills-section container">
+    <h2 class="section-title">Core Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">C++</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">OpenCV</div>
+      <div class="skill-card">Arduino</div>
+      <div class="skill-card">Flutter</div>
+      <div class="skill-card">Linux</div>
+      <div class="skill-card">NumPy</div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="projects-section container">
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>Smart Doorbell System</h3>
+        <p>IoT-based visitor monitoring and notification system.</p>
+        <span class="project-tech">ESP32 • Firebase • Flutter</span>
+      </div>
+
+      <div class="project-card">
+        <h3>Chat Application</h3>
+        <p>Real-time messaging app with authentication.</p>
+        <span class="project-tech">Flutter • Firebase</span>
+      </div>
+
+      <div class="project-card highlight">
+        <h3>MelodySync <small>(In Progress)</small></h3>
+        <p>Voice-based music recognition and synchronization system.</p>
+        <span class="project-tech">Python • DSP • AI</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact-section container" id="contact">
+    <h2 class="section-title">Let’s Connect</h2>
+
+    <div class="contact-links">
+      <a href="mailto:paradoxzsite@gmail.com" class="contact-card">
+        <span>Email</span>
+        <small>paradoxzsite@gmail.com</small>
+      </a>
+
+      <a href="https://github.com/nyxparadox" class="contact-card" target="_blank">
+        <span>GitHub</span>
+        <small>@nyxparadox</small>
+      </a>
+
+      <a href="https://www.linkedin.com/in/rohit-singh-nyx/" class="contact-card" target="_blank">
+        <span>LinkedIn</span>
+        <small>Rohit Singh</small>
+      </a>
+
+      <a href="https://www.instagram.com/_rohit.7__" class="contact-card" target="_blank">
+        <span>Instagram</span>
+        <small>@_rohit.7__</small>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
   <footer class="container footer">
-    <p>© 2025 MASTER. All Rights Reserved.</p>
-    <!-- 🔁 CHANGE NAME & YEAR -->
+    <p>© 2025 Rohit Singh. All Rights Reserved.</p>
   </footer>
 
-  <!-- ================= JAVASCRIPT ================= -->
+  <!-- JS -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/hero.js"></script>
 

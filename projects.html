@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects | Rohit Singh</title>
+  <meta name="description" content="Projects by Rohit Singh – Embedded Systems, Computer Vision, and Mobile Applications" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="container navbar">
+    <div class="logo">Rohit Singh</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ================= PROJECTS PAGE ================= -->
+  <main class="container projects-page">
+
+    <h1 class="page-title">Projects</h1>
+    <p class="page-subtitle">
+      A selection of projects demonstrating my work in embedded systems,
+      computer vision, mobile development, and intelligent software design.
+    </p>
+
+    <!-- ================= PROJECT 1 ================= -->
+    <section class="project-detail">
+      <h2>Smart Doorbell System</h2>
+      <span class="project-tagline">
+        IoT-based Visitor Monitoring & Notification System
+      </span>
+
+      <h3>Problem</h3>
+      <p>
+        Traditional doorbells provide no context or history of visitors.
+        This project addresses that limitation by enabling real-time visitor
+        monitoring and cloud-based logging through a mobile application.
+      </p>
+
+      <h3>What I Built</h3>
+      <p>
+        I designed and implemented an end-to-end IoT system that captures
+        visitor images using an ESP32-CAM, securely stores them in the cloud,
+        logs events in a database, and delivers real-time notifications to
+        a Flutter-based mobile application.
+      </p>
+
+      <h3>System Workflow</h3>
+      <ul>
+        <li>Visitor presses the doorbell</li>
+        <li>ESP32-CAM captures an image</li>
+        <li>Image is uploaded to Cloudinary</li>
+        <li>Event is logged in Firebase Firestore</li>
+        <li>Python service triggers FCM notifications</li>
+        <li>Flutter app displays visitor details</li>
+      </ul>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li>Real-time push notifications</li>
+        <li>Cloud-backed visitor history</li>
+        <li>Cross-platform Flutter mobile app</li>
+        <li>Secure authentication and encrypted communication</li>
+      </ul>
+
+      <h3>Technology Stack</h3>
+      <p class="tech-stack">
+        ESP32-CAM • Arduino • Firebase Firestore • Firebase Cloud Messaging •
+        Cloudinary • Python • Flutter
+      </p>
+
+      <h3>What This Project Demonstrates</h3>
+      <p>
+        This project demonstrates my ability to design complete IoT systems,
+        integrate embedded hardware with cloud services, and build secure,
+        real-time mobile applications.
+      </p>
+    </section>
+
+    <!-- ================= PROJECT 2 ================= -->
+    <section class="project-detail">
+      <h2>Chat Application</h2>
+      <span class="project-tagline">
+        Real-Time Messaging Application
+      </span>
+
+      <h3>Problem</h3>
+      <p>
+        Reliable real-time communication requires proper authentication,
+        synchronization, and cloud integration. This project focuses on
+        implementing a clean and efficient real-time chat experience.
+      </p>
+
+      <h3>What I Built</h3>
+      <p>
+        I developed a real-time chat application using Flutter and Firebase
+        that allows authenticated users to exchange messages instantly with
+        synchronized updates across devices.
+      </p>
+
+      <h3>Core Features</h3>
+      <ul>
+        <li>Real-time message delivery</li>
+        <li>Firebase-based authentication</li>
+        <li>Responsive and simple chat interface</li>
+      </ul>
+
+      <h3>Design Decision</h3>
+      <p>
+        Media sharing features such as image and video transfer were
+        intentionally excluded to keep the system lightweight and focused
+        on real-time communication fundamentals.
+      </p>
+
+      <h3>Technology Stack</h3>
+      <p class="tech-stack">
+        Flutter • Dart • Firebase Firestore • Firebase Authentication
+      </p>
+
+      <h3>What This Project Demonstrates</h3>
+      <p>
+        This project highlights my understanding of real-time systems,
+        authentication workflows, and scalable mobile app development.
+      </p>
+    </section>
+
+    <!-- ================= PROJECT 3 ================= -->
+    <section class="project-detail highlight-project">
+      <h2>MelodySync <small>(In Progress)</small></h2>
+      <span class="project-tagline">
+        Voice-Activated Music Synchronization System
+      </span>
+
+      <h3>Problem</h3>
+      <p>
+        Existing music recognition systems can identify songs but cannot
+        synchronize playback with a user’s singing. MelodySync explores
+        a new way of interacting with music through vocal input.
+      </p>
+
+      <h3>What I’m Building</h3>
+      <p>
+        MelodySync is an AI-based system that listens to a short segment of
+        a user singing, identifies the song, determines the exact timestamp
+        in the original track, and resumes playback from that precise position.
+      </p>
+
+      <h3>How It Works</h3>
+      <ul>
+        <li>Wake word activates the system</li>
+        <li>Short vocal sample is recorded</li>
+        <li>Pitch contours and melodic patterns are extracted</li>
+        <li>Patterns are matched against a song database</li>
+        <li>Playback resumes from the detected timestamp</li>
+      </ul>
+
+      <h3>What Makes It Different</h3>
+      <p>
+        Unlike traditional systems that rely on lyrics or audio fingerprinting,
+        MelodySync focuses on melodic structure, allowing recognition from
+        humming or singing alone.
+      </p>
+
+      <h3>Current Status</h3>
+      <p>
+        The current implementation runs in a terminal environment, prioritizing
+        accuracy, synchronization precision, and low latency. UI and streaming
+        integrations are planned for future versions.
+      </p>
+
+      <h3>Technical Domains</h3>
+      <p class="tech-stack">
+        Python • Digital Signal Processing • Music Information Retrieval •
+        Time-Series Analysis
+      </p>
+
+      <h3>What This Project Demonstrates</h3>
+      <p>
+        MelodySync demonstrates my ability to work with complex signal-processing
+        concepts, design algorithm-driven systems, and explore innovative
+        human–computer interaction models.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="container footer">
+    <p>© 2025 Rohit Singh. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
