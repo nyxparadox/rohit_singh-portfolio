@@ -518,3 +518,83 @@ section {
     font-size: 2.2rem;
   }
 }
+
+
+
+
+/* ================= ABOUT PAGE ================= */
+
+.about-hero {
+  text-align: center;
+  padding-top: 120px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.about-hero p {
+  max-width: 600px;
+  margin: auto;
+  color: var(--text-muted);
+}
+
+/* WHAT I DO */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.about-card {
+  background: linear-gradient(
+    135deg,
+    rgba(0,212,255,0.08),
+    rgba(255,59,59,0.05)
+  );
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.4s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--glow-blue);
+}
+
+/* JOURNEY */
+.timeline {
+  margin-top: 60px;
+  display: grid;
+  gap: 32px;
+}
+
+.timeline-item {
+  padding: 24px;
+  border-left: 3px solid var(--accent-blue);
+}
+
+.timeline-item span {
+  font-weight: 600;
+}
+
+.timeline-item.highlight {
+  border-color: var(--accent-red);
+}
+
+/* MINDSET */
+.about-mindset {
+  max-width: 700px;
+  margin: 120px auto 0;
+  text-align: center;
+}
+
+/* CTA */
+.about-cta {
+  text-align: center;
+  margin-top: 100px;
+}
+

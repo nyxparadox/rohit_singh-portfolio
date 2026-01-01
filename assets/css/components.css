@@ -63,3 +63,45 @@
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.05);
 }
+
+
+
+
+.btn-secondary {
+  margin-top: 24px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--accent-blue);
+  color: #000;
+  box-shadow: var(--glow-blue);
+}
+
+
+
+
+/* HERO BUTTON GROUP */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* Mobile: stack nicely */
+@media (max-width: 600px) {
+  .hero-buttons {
+    flex-direction:column;
+    align-items: flex-start;
+  }
+
+  .btn-secondary {
+    margin-left: 0;
+  }
+}
+
