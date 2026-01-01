@@ -667,3 +667,403 @@ section {
   text-align: center;
 }
 
+
+
+
+
+
+/* ===== PROJECT SHOWCASE ===== */
+
+.project-showcase {
+  margin: 140px 0;
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.project-header h2 {
+  font-size: 2.2rem;
+}
+
+.project-tagline {
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* Tech tags */
+.tech-tags {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.tech-tags span {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Body layout */
+.project-body {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+/* Text */
+.project-text h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.project-text p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+/* Visual placeholder */
+.project-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 360px;
+  height: 240px;
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,212,255,0.12),
+      rgba(255,59,59,0.08)
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .project-body {
+    grid-template-columns: 1fr;
+  }
+
+  .project-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+
+
+.project-image {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.image-caption {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+
+
+
+/* ===== LIGHTBOX ===== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  animation: zoomIn 0.3s ease;
+}
+
+/* Animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Cursor hint */
+.project-image {
+  cursor: zoom-in;
+}
+
+
+
+
+/* ===== PROJECT ICON BUTTONS ===== */
+
+.project-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+
+.btn-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 22px;
+  border-radius: 26px;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  color: #000;
+  background: var(--accent-blue);
+  text-decoration: none;
+
+  box-shadow: 0 0 20px rgba(0,212,255,0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-project:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0,212,255,0.7);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+}
+
+.btn-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Secondary */
+.btn-project.secondary {
+  background: transparent;
+  color: var(--accent-blue);
+  border: 1px solid var(--accent-blue);
+  box-shadow: none;
+}
+
+.btn-project.secondary:hover {
+  background: var(--accent-blue);
+  color: #000;
+}
+
+/* Disabled */
+.btn-project.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+/* ===== BUTTON HOVER ANIMATION ===== */
+
+.btn-project {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon slide */
+.btn-project:hover .btn-icon {
+  transform: translateX(4px);
+}
+
+/* Smooth transition */
+.btn-icon {
+  transition: transform 0.25s ease;
+}
+
+/* Subtle shine */
+.btn-project::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  transform: translateX(-120%);
+  transition: transform 0.5s ease;
+}
+
+.btn-project:hover::after {
+  transform: translateX(120%);
+}
+
+
+
+
+/* ===== ACCESSIBILITY FOCUS ===== */
+
+.btn-project:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(0,212,255,0.4),
+    0 0 30px rgba(0,212,255,0.6);
+}
+
+
+
+
+.project-buttons.hidden {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.project-buttons.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+
+
+/* ===== PAGE FADE IN ===== */
+body {
+  animation: pageFade 0.6s ease-out;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+.project-showcase.section-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.project-showcase.section-show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+
+
+.project-image {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-image:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+.tech-tags span {
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.tech-tags span:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.12);
+}
+
+
+
+
+
+
+.project-header h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.project-header h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--accent-blue);
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.project-showcase.section-show .project-header h2::after {
+  width: 60%;
+  left: 20%;
+}
+
+
+
+
+
+/* ===== FINAL RHYTHM ===== */
+.project-showcase {
+  margin: 160px 0;
+}
+
+.project-text p {
+  max-width: 560px;
+}
+
+.project-body {
+  align-items: center;
+}
