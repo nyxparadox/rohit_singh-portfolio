@@ -157,3 +157,59 @@ sections.forEach(sec => {
   sec.classList.add("section-hidden");
   sectionObserver.observe(sec);
 });
+
+
+
+
+// Hero stagger animation
+const heroItems = document.querySelectorAll(
+  ".hero h1, .hero .role, .hero-subline, .hero-buttons"
+);
+
+heroItems.forEach((el, i) => {
+  el.style.opacity = 0;
+  el.style.transform = "translateY(10px)";
+  setTimeout(() => {
+    el.style.opacity = 1;
+    el.style.transform = "translateY(0)";
+    el.style.transition = "0.6s ease";
+  }, 150 * i);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const heroItems = document.querySelectorAll(
+    ".hero h1, .hero .role, .hero-subline, .hero-buttons"
+  );
+
+  heroItems.forEach((el, i) => {
+    el.style.opacity = 0;
+    el.style.transform = "translateY(14px)";
+
+    setTimeout(() => {
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
+      el.style.transition = "0.7s ease";
+    }, i * 160);
+  });
+});
+
+
+const revealSections = document.querySelectorAll("section");
+
+const homesectionObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("section-visible");
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+revealSections.forEach(sec => {
+  sec.classList.add("section-hidden");
+  homesectionObserver.observe(sec);
+});
