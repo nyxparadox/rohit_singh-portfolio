@@ -116,11 +116,11 @@ section {
 /* ================= HERO ANIMATIONS ================= */
 
 /* Smooth entrance */
-.hero {
+/* .hero {
   opacity: 0;
   transform: translateY(30px);
   animation: heroFade 1.2s ease forwards;
-}
+} */
 
 @keyframes heroFade {
   to {
@@ -1235,4 +1235,113 @@ body {
   white-space: normal;
   word-break: break-word;
   overflow-wrap: anywhere;
+}
+
+
+
+
+/* ===== ABOUT CONTINUITY SECTIONS ===== */
+
+.about-section {
+  margin: 90px auto;
+}
+
+/* subtle divider to match theme */
+.about-section::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-blue),
+    transparent
+  );
+  margin-bottom: 28px;
+  opacity: 0.7;
+}
+
+/* ---------------- EDUCATION ---------------- */
+
+.education-block h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.edu-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.edu-meta span {
+  margin: 0 6px;
+  opacity: 0.6;
+}
+
+.edu-school {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  opacity: 0.85;
+}
+
+/* ---------------- ACHIEVEMENTS ---------------- */
+
+.achievement-list {
+  margin-top: 15px;
+  padding-left: 18px;
+}
+
+.achievement-list li {
+  margin-bottom: 15px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.achievement-list strong {
+  color: #fff;
+  font-weight: 500;
+}
+
+.achievement-list .meta {
+  margin-left: 6px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* ---------------- BEYOND ENGINEERING ---------------- */
+
+.beyond-text {
+  max-width: 640px;
+  line-height: 1.75;
+  color: var(--text-muted);
+  opacity: 0.95;
+}
+
+
+@media (max-width: 768px) {
+  .about-section {
+    margin: 70px auto;
+  }
+
+  .what-i-do.about-section,
+  .my-journey.about-section {
+    margin-top: 56px;
+  }
+}
+
+
+/* ===== GLOBAL SECTION REVEAL (CONSISTENT) ===== */
+
+.about-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.about-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }

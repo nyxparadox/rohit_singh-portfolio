@@ -40,23 +40,44 @@ projectCards.forEach((card) => projectObserver.observe(card));
 
 
 // About page animation
-const aboutCards = document.querySelectorAll(".about-card, .timeline-item");
+// const aboutCards = document.querySelectorAll(".about-card, .timeline-item");
 
-aboutCards.forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = "translateY(20px)";
+// aboutCards.forEach(el => {
+//   el.style.opacity = 0;
+//   el.style.transform = "translateY(20px)";
+// });
+
+// const aboutObserver = new IntersectionObserver(entries => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       entry.target.style.opacity = 1;
+//       entry.target.style.transform = "translateY(0)";
+//     }
+//   });
+// }, { threshold: 0.2 });
+
+// aboutCards.forEach(el => aboutObserver.observe(el));
+
+
+
+// ===== About Page Section Reveal(Animation) =====
+const aboutSections = document.querySelectorAll(".about-section");
+
+const aboutObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("about-visible");
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+aboutSections.forEach(section => {
+  section.classList.add("about-hidden");
+  aboutObserver.observe(section);
 });
-
-const aboutObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
-    }
-  });
-}, { threshold: 0.2 });
-
-aboutCards.forEach(el => aboutObserver.observe(el));
 
 
 
