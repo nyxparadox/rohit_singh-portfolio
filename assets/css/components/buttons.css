@@ -1,0 +1,100 @@
+/* ================= PRIMARY BUTTON ================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 28px;
+  border-radius: 999px;
+
+  background: var(--accent-blue);
+  color: #000;
+
+  font-weight: 600;
+
+  box-shadow: var(--glow-blue);
+
+  transition: 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+/* Shine effect */
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+.btn-primary:hover::after {
+  transform: translateX(120%);
+}
+
+/* ================= SECONDARY BUTTON ================= */
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 28px;
+  border-radius: 999px;
+
+  border: 1px solid var(--accent-blue);
+
+  color: var(--accent-blue);
+
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--accent-blue);
+  color: #000;
+}
+
+/* ================= PROJECT BUTTON ================= */
+
+.btn-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 22px;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: 0.3s ease;
+}
+
+.btn-project:hover {
+  transform: translateY(-4px);
+}
+
+/* ================= BUTTON GROUP ================= */
+
+.hero-buttons,
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 24px;
+}

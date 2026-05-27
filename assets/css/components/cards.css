@@ -1,0 +1,259 @@
+/* ================= GLOBAL CARD ================= */
+
+.card {
+  background: var(--bg-card);
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  transition: 0.3s ease;
+}
+
+/* ================= SKILL CARD ================= */
+
+.skill-card {
+  padding: 20px;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--glow-blue);
+}
+
+/* ================= PROJECT CARD ================= */
+
+.project-card {
+  position: relative;
+
+  padding: 28px;
+
+  text-align: left;
+
+  overflow: hidden;
+}
+
+.project-card h3 {
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--glow-blue);
+}
+
+.project-card.highlight {
+  border-color: var(--accent-red);
+}
+
+/* Arrow */
+.project-card::after {
+  content: "→";
+
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+
+  opacity: 0.4;
+
+  transition: 0.3s ease;
+}
+
+.project-card:hover::after {
+  transform: translateX(6px);
+}
+
+/* ================= FEATURE CARD ================= */
+
+.feature-card,
+.challenge-card,
+.stack-card {
+  padding: 28px;
+}
+
+.feature-card:hover,
+.challenge-card:hover,
+.stack-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* =======================================================
+   FEATURED PROJECT CARDS
+======================================================= */
+
+.project-card {
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 36px;
+
+  min-height: 220px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(10,12,16,0.96),
+      rgba(6,8,12,0.95)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+
+
+/* ================= BLUE GLOW ================= */
+
+.project-card:hover {
+
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(0, 213, 255, 0.752);
+
+  box-shadow:
+    0 0 22px rgba(0, 213, 255, 0.598),
+    0 0 70px rgba(0,212,255,0.12);
+}
+
+
+
+
+/* ================= RED PROJECT ================= */
+
+.project-card.highlight {
+
+  border-color:
+    rgba(255,59,59,0.55);
+}
+
+
+
+
+.project-card.highlight:hover {
+
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(255,59,59,0.5);
+
+  box-shadow:
+    0 0 22px rgba(255,59,59,0.22),
+    0 0 70px rgba(255,59,59,0.12);
+}
+
+
+
+
+/* ================= TITLE ================= */
+
+.project-card h3 {
+
+  font-family:
+    'times new roman',
+    monospace;
+
+  font-size: 2rem;
+
+  line-height: 1.3;
+
+  margin-bottom: 24px;
+
+  color: var(--text-main);
+}
+
+
+
+
+/* ================= DESCRIPTION ================= */
+
+.project-card p {
+
+  color: var(--text-muted);
+
+  line-height: 1.9;
+
+  margin-bottom: 34px;
+
+  font-size: 1rem;
+}
+
+
+
+
+/* ================= TECH STACK ================= */
+
+.project-tech {
+
+  color: var(--accent-blue);
+
+  font-size: 1rem;
+
+  letter-spacing: 0.5px;
+
+  font-weight: 500;
+}
+
+
+
+
+/* ================= ARROW ================= */
+
+.project-card::after {
+
+  content: "→";
+
+  position: absolute;
+
+  right: 28px;
+  bottom: 24px;
+
+  color:
+    rgba(255,255,255,0.45);
+
+  font-size: 1.2rem;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+
+
+.project-card:hover::after {
+
+  transform:
+    translateX(5px);
+
+  opacity: 1;
+}

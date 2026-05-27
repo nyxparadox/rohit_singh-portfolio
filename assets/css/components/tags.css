@@ -1,0 +1,42 @@
+/* ================= TAG SYSTEM ================= */
+
+.project-tags,
+.tech-tags,
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-tags span,
+.tech-tags span,
+.skill-icons span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  font-size: 0.85rem;
+
+  transition: 0.25s ease;
+}
+
+.project-tags span:hover,
+.tech-tags span:hover,
+.skill-icons span:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.1);
+}
+
+.skill-icons img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}

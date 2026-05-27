@@ -1,0 +1,112 @@
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar nav a {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+  opacity: 1;
+  color: var(--accent-blue);
+}
+
+
+
+/* ================= ACTIVE NAV LINK ================= */
+
+.navbar nav a {
+
+  position: relative;
+}
+
+
+
+
+/* ================= ACTIVE NAV LINK ================= */
+
+.navbar nav a {
+
+  position: relative;
+
+  padding-bottom: 8px;
+}
+
+
+
+
+.navbar nav a.active {
+
+  color: var(--text-main);
+}
+
+
+
+
+.navbar nav a.active::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  width: 24px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: var(--accent-blue);
+
+  box-shadow:
+    0 0 10px rgba(0,212,255,0.5);
+}
+
+
+
+
+.navbar nav a.active {
+
+  color:
+    var(--text-main);
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}

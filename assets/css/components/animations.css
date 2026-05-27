@@ -1,0 +1,95 @@
+/* ================= PAGE ENTER ================= */
+
+body {
+  animation: pageEnter 0.3s ease-out;
+}
+
+@keyframes pageEnter {
+
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* ================= REVEAL ================= */
+
+/* .reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+} */
+
+
+/* .reveal {
+
+  opacity: 0;
+
+  transform:
+    translateY(40px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+} */
+
+.reveal {
+
+  opacity: 0;
+
+  transform:
+    translateY(40px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+
+  will-change:
+    opacity,
+    transform;
+}
+
+
+
+
+.reveal.active {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+
+
+/* ================= FLOAT ================= */
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+}
