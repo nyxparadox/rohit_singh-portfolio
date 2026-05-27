@@ -1,0 +1,94 @@
+
+:root {
+
+  /* ================= BACKGROUNDS ================= */
+
+  --bg-main: #050608;
+
+  --bg-card:
+    rgba(11, 15, 20, 0.78);
+
+  --bg-card-hover:
+    rgba(16, 22, 30, 0.88);
+
+
+
+
+  /* ================= TEXT ================= */
+
+  --text-main: #f2f5f7;
+
+  --text-muted: #98a2ad;
+
+  --text-soft: #c9d2db;
+
+
+
+
+  /* ================= ACCENTS ================= */
+
+  --accent-blue: #00d4ff;
+
+  --accent-blue-dark: #00b8db;
+
+  --accent-red: #ff3b3b;
+
+
+
+
+  /* ================= GLOWS ================= */
+
+  --glow-blue:
+    0 0 20px rgba(0, 212, 255, 0.28);
+
+  --glow-blue-strong:
+    0 0 35px rgba(0, 212, 255, 0.42);
+
+  --glow-red:
+    0 0 18px rgba(255, 59, 59, 0.28);
+
+
+
+
+  /* ================= BORDERS ================= */
+
+  --border-soft:
+    rgba(255,255,255,0.07);
+
+  --border-accent:
+    rgba(0,212,255,0.22);
+
+
+
+
+  /* ================= RADIUS ================= */
+
+  --radius: 18px;
+
+  --radius-large: 26px;
+
+
+
+
+  /* ================= TYPOGRAPHY ================= */
+
+  --font-main:
+    'Inter',
+    system-ui,
+    sans-serif;
+
+
+
+
+  /* ================= LAYOUT ================= */
+
+  --container-width: 1200px;
+
+  --section-spacing: 120px;
+
+}
+
+
+
+
+

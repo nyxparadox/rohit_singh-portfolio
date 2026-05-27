@@ -1,0 +1,28 @@
+.container {
+  width: 90%;
+  max-width: var(--container-width);
+  margin: auto;
+}
+
+section {
+  padding: var(--section-spacing) 0;
+  scroll-margin-top: 100px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
