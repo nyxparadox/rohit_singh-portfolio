@@ -1,273 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Rohit Singh</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/variables.css" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/pages.css" />
+  <!-- ================= META ================= -->
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ================= TITLE ================= -->
+
+  <title>
+    Projects | Rohit Singh
+  </title>
+
+  <!-- ================= GOOGLE FONTS ================= -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ================= MAIN CSS ================= -->
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
 </head>
-
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <img src="" alt="Preview">
-</div>
-
 
 <body>
 
-  <!-- ============ NAVBAR ============ -->
+
+
+
+
+  <!-- ================= NAVBAR ================= -->
+
   <header class="container navbar">
-    <div class="logo">Rohit Singh</div>
+
+    <a href="index.html" class="logo">
+
+      Rohit Singh
+
+    </a>
+
     <nav>
+
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html" class="active">Projects</a>
       <a href="index.html#contact">Contact</a>
+
     </nav>
+
   </header>
 
-  <!-- ============ PAGE INTRO ============ -->
-  <main class="container">
-    <section class="projects-hero">
-      <h1>Projects</h1>
-      <p>
-        A selection of systems and applications I’ve built,
-        focusing on real-world engineering problems.
+
+
+
+
+
+
+  <!-- ================= PROJECTS HERO ================= -->
+
+  <section class="projects-page container">
+
+    <div class="projects-hero">
+
+      <span class="projects-kicker">
+        ENGINEERING PROJECTS
+      </span>
+
+      <h1 class="page-title">
+        Systems I Build
+      </h1>
+
+      <p class="page-subtitle">
+
+        A collection of embedded systems,
+        realtime IoT platforms, intelligent applications,
+        and hardware-software integrated engineering projects.
+
       </p>
-    </section>
 
-    <!-- ============ PROJECT 1 ============ -->
-    <section class="project-showcase" id="smart-doorbell">
 
-      <div class="project-header">
-        <h2>Smart Doorbell System</h2>
-        <p class="project-tagline">
-          IoT-based visitor monitoring with real-time alerts
-        </p>
 
-        <div class="tech-tags">
-          <span>ESP32</span>
-          <span>Firebase</span>
-          <span>Flutter</span>
-          <span>IoT</span>
+
+
+      <div class="projects-stats">
+
+        <div class="stat-box">
+
+          <h3>03</h3>
+
+          <p>Integrated Systems</p>
+
         </div>
+
+
+
+
+
+        <div class="stat-box">
+
+          <h3>ESP32</h3>
+
+          <p>Embedded Platforms</p>
+
+        </div>
+
+
+
+
+
+        <div class="stat-box">
+
+          <h3>Realtime</h3>
+
+          <p>Cloud Synchronization</p>
+
+        </div>
+
       </div>
 
-      <div class="project-body">
-        <div class="project-text">
-          <h3>What I Built</h3>
-          <p>
-            An end-to-end smart doorbell system that captures visitor images
-            using ESP32-CAM, stores them securely in the cloud, and sends
-            instant notifications to a mobile app.
-          </p>
+    </div>
 
-          <h3>Key Engineering Focus</h3>
-          <p>
-            This project demonstrates event-driven IoT design,
-            cloud integration, and real-time notification pipelines
-            across hardware and mobile platforms.
-          </p>
+  </section>
+
+
+
+
+
+  <!-- ================= PROJECTS GRID ================= -->
+
+  <section class="projects-section container">
+
+    <div class="projects-grid">
+
+
+
+
+      <!-- ================= NOTICE SYSTEM ================= -->
+
+      <a href="projects/notice-system.html" class="project-card card">
+
+        <div class="project-status deployed">
+          Deployable
+        </div>
+
+        <div class="project-preview">
+
+          <img src="assets/images/notice-system/thumnail(notice_system).png" alt="Realtime Smart Notice System">
+
         </div>
 
 
 
-      <div class="project-buttons">
-  <a href="https://github.com/nyxparadox/Smart_Doorbell_Security_system.git" target="_blank" class="btn-project">
-    <span class="btn-icon">
-      <!-- GitHub Icon -->
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="currentColor"
-          d="M12 .5C5.7.5.6 5.6.6 11.9c0 5 3.2 9.2 7.7 10.7.6.1.8-.2.8-.5v-1.9c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 1.7 2.8 1.2.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1.9-.2 1.8-.3 2.7-.3s1.8.1 2.7.3c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.7 1.1 2.9 0 4.3-2.6 5.2-5.1 5.5.4.4.8 1.1.8 2.2v3.2c0 .3.2.6.8.5 4.5-1.5 7.7-5.7 7.7-10.7C23.4 5.6 18.3.5 12 .5z"/>
-      </svg>
-    </span>
-    <span>View Code</span>
-  </a>
-
-  <a href="#" class="btn-project secondary">
-    <span class="btn-icon">
-      <!-- Document Icon -->
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="currentColor"
-          d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5z"/>
-      </svg>
-    </span>
-    <span>Case Study</span>
-  </a>
-</div>
 
 
+        <div class="project-info">
 
+          <span class="project-type">
+            Institutional IoT Platform
+          </span>
 
+          <h3>
+            Realtime Smart Notice System
+          </h3>
 
-        <div class="project-visual">
-        <div class="project-showcase">
-
-  <div class="project-media-grid">
-
-    <figure class="media-item">
-      <img
-        src="assets/images/smart_doorbell/SDS_architecture.png"
-        alt="System Architecture Diagram"
-        class="project-image"
-      >
-      <figcaption>System Architecture Diagram</figcaption>
-    </figure>
-
-    <!-- <figure class="media-item">
-      <img
-        src="assets/images/projects/doorbell-hardware.png"
-        alt="ESP32-CAM Hardware Setup"
-        class="project-image"
-      >
-      <figcaption>ESP32-CAM based doorbell hardware setup</figcaption>
-    </figure> -->
-
-    <figure class="media-item">
-      <img
-        src="assets/images/smart_doorbell/flutter_app_interface.png"
-        alt="Mobile App Interface"
-        class="project-image"
-      >
-      <figcaption>Mobile app interface for visitor notifications</figcaption>
-    </figure>
-
-  </div>
-
-</div>
-
-
-        </div>
-      </div>
-
-    </section>
-
-    <!-- ============ PROJECT 2 ============ -->
-    <section class="project-showcase" id="chat-app">
-
-      <div class="project-header">
-        <h2>Real-Time Chat Application</h2>
-        <p class="project-tagline">
-          Lightweight messaging app with secure authentication
-        </p>
-
-        <div class="tech-tags">
-          <span>Flutter</span>
-          <span>Firebase</span>
-          <span>Realtime DB</span>
-        </div>
-      </div>
-
-      <div class="project-body">
-        <div class="project-text">
-          <h3>What I Built</h3>
           <p>
-            A real-time chat application built with Flutter and Firebase,
-            supporting user authentication and instant message synchronization.
+
+            Cloud-connected institutional notice broadcasting
+            system using ESP32, Firebase, Flutter,
+            and HUB75E RGB matrix displays.
+
           </p>
 
-          <h3>Design Decision</h3>
-          <p>
-            The app intentionally focuses on text messaging only,
-            prioritizing reliability, speed, and clean architecture
-            over media-heavy features.
-          </p>
-          <div class="project-buttons">
-  <a href="https://github.com/nyxparadox/Realtime-chat_app.git" target="_blank" class="btn-project">
-    <span class="btn-icon">
-      <!-- GitHub Icon -->
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="currentColor"
-          d="M12 .5C5.7.5.6 5.6.6 11.9c0 5 3.2 9.2 7.7 10.7.6.1.8-.2.8-.5v-1.9c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.3-1.6-1.3-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 1.7 2.8 1.2.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3 1.1.9-.2 1.8-.3 2.7-.3s1.8.1 2.7.3c2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.7 1.1 2.9 0 4.3-2.6 5.2-5.1 5.5.4.4.8 1.1.8 2.2v3.2c0 .3.2.6.8.5 4.5-1.5 7.7-5.7 7.7-10.7C23.4 5.6 18.3.5 12 .5z"/>
-      </svg>
-    </span>
-    <span>View Code</span>
-  </a>
-</div>
 
 
-        </div>
 
-        <div class="project-visual">
-          <div class="image-placeholder">
-            Chat UI screenshot
+
+          <div class="project-tags">
+
+            <span>ESP32</span>
+            <span>Flutter</span>
+            <span>Firebase</span>
+            <span>IoT</span>
+
           </div>
+
         </div>
-      </div>
 
-    </section>
+      </a>
 
-    <!-- ============ PROJECT 3 ============ -->
-    <section class="project-showcase" id="melodysync">
 
-      <div class="project-header">
-        <h2>MelodySync <span style="opacity:0.6;">(In Progress)</span></h2>
-        <p class="project-tagline">
-          Voice-driven music synchronization using melodic analysis
+
+
+
+      <!-- ================= SMART DOORBELL ================= -->
+
+      <a href="projects/smart-doorbell.html" class="project-card card">
+
+        <div class="project-status deployed">
+          Completed
+        </div>
+
+        <div class="project-preview">
+
+          <img src="assets/images/smart_doorbell/thumbnail(Doorbell-System).png" alt="Smart Doorbell System">
+
+        </div>
+
+
+
+
+
+        <div class="project-info">
+
+          <span class="project-type">
+            Smart Embedded System
+          </span>
+
+          <h3>
+            Smart Doorbell System
+          </h3>
+
+          <p>
+
+            IoT-based visitor monitoring and
+            realtime notification system
+            integrated with ESP32-CAM and mobile connectivity.
+
+          </p>
+
+
+
+
+
+          <div class="project-tags">
+
+            <span>ESP32-CAM</span>
+            <span>Flutter</span>
+            <span>Firebase</span>
+
+          </div>
+
+        </div>
+
+      </a>
+
+
+
+
+
+      <!-- ================= CHAT APP ================= -->
+
+      <!-- 
+      <a href="projects/chat-app.html" class="project-card card">
+
+        <div class="project-status deployed">
+          Completed
+        </div>
+
+        <div class="project-preview">
+
+          <img src="assets/images/projects/chat-app/hero.webp" alt="Chat Application">
+
+        </div>
+
+
+
+
+
+        <div class="project-info">
+
+          <span class="project-type">
+            Realtime Mobile Platform
+          </span>
+
+          <h3>
+            Chat Application
+          </h3>
+
+          <p>
+
+            Realtime messaging platform with
+            authentication, Firebase synchronization,
+            and responsive mobile architecture.
+
+          </p>
+
+
+
+
+
+          <div class="project-tags">
+
+            <span>Flutter</span>
+            <span>Firebase</span>
+            <span>Realtime DB</span>
+
+          </div>
+
+        </div>
+
+      </a> -->
+
+
+
+
+
+      <!-- ================= MELODYSYNC ================= -->
+
+      <!-- <a href="projects/melodysync.html" class="project-card card progress-card">              when completed -->
+      <a href="#2" class="project-card card progress-card">
+
+        <div class="project-status progress">
+          In Research & Development
+        </div>
+
+        <div class="project-preview">
+
+          <img src="assets/images/melodySync (thumbnail).png" alt="MelodySync">
+
+        </div>
+
+
+
+
+
+        <div class="project-info">
+
+          <span class="project-type">
+            AI Audio Research
+          </span>
+
+          <h3>
+            MelodySync
+          </h3>
+
+          <p>
+
+            AI-powered music recognition and
+            synchronization platform using
+            DSP and machine learning concepts.
+
+            
+          </p>
+
+          
+
+
+
+
+          <div class="project-tags">
+
+            <span>Python</span>
+            <span>AI</span>
+            <span>DSP</span>
+
+          </div>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- ================= ENGINEERING PHILOSOPHY ================= -->
+
+  <section class="about-section container">
+
+    <h2 class="section-title">
+      Engineering Philosophy
+    </h2>
+
+
+
+
+
+    <div class="about-cards">
+
+
+
+
+      <div class="about-card card">
+
+        <h3>
+          System Architecture
+        </h3>
+
+        <p>
+
+          I focus heavily on architecture planning,
+          synchronization flow, deployment feasibility,
+          and realtime communication before implementation.
+
         </p>
 
-        <div class="tech-tags">
-          <span>Python</span>
-          <span>DSP</span>
-          <span>Audio Analysis</span>
-        </div>
       </div>
 
-      <div class="project-body">
-        <div class="project-text">
-          <h3>Concept</h3>
-          <p>
-            MelodySync listens to a short segment of a user singing,
-            identifies the song and exact timestamp, and resumes playback
-            from that precise position.
-          </p>
-
-          <h3>What I’m Exploring</h3>
-          <p>
-            This project explores pitch extraction, melodic pattern matching,
-            and time-series alignment to create a natural
-            human-music interaction experience.
-          </p>
-          <div class="project-buttons">
-  <span class="btn-project disabled">
-    <span class="btn-icon">⏳</span>
-    <span>In Progress</span>
-  </span>
-</div>
 
 
-        </div>
 
-        <div class="project-visual">
-          <div class="image-placeholder">
-            Audio waveform / concept diagram
-          </div>
-        </div>
+
+      <div class="about-card card">
+
+        <h3>
+          Hardware + Software Integration
+        </h3>
+
+        <p>
+
+          My engineering approach combines embedded hardware,
+          cloud infrastructure, mobile interfaces,
+          and intelligent system behavior.
+
+        </p>
+
       </div>
 
-    </section>
 
-  </main>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="container footer">
-    <p>© 2025 Rohit Singh. All rights reserved.</p>
+
+
+      <div class="about-card card">
+
+        <h3>
+          Practical Deployment
+        </h3>
+
+        <p>
+
+          I prefer building systems that move beyond
+          prototypes into practical realtime environments
+          with scalability and reliability.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- ================= CURRENT RESEARCH ================= -->
+
+  <section class="projects-research container">
+
+    <div class="research-box card">
+
+      <span class="research-label">
+        CURRENT EXPLORATION
+      </span>
+
+      <h2>
+        Computer Vision + Intelligent Systems
+      </h2>
+
+      <p>
+
+        Currently exploring intelligent embedded systems,
+        realtime visual processing,
+        and AI-assisted hardware integration
+        for automation-focused engineering applications.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-content">
+
+
+
+
+      <!-- Brand -->
+      <div class="footer-brand">
+
+        <h3>
+          Rohit Singh
+        </h3>
+
+        <p>
+          Embedded Systems • IoT • Mobile Development
+        </p>
+
+      </div>
+
+
+
+
+
+      <!-- Links -->
+      <div class="footer-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="projects.html">
+          Projects
+        </a>
+
+      </div>
+
+
+
+
+
+      <!-- Social -->
+      <div class="footer-socials">
+
+        <a href="https://github.com/nyxparadox" target="_blank">
+
+          GitHub
+
+        </a>
+
+        <a href="https://linkedin.com" target="_blank">
+
+          LinkedIn
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="footer-bottom">
+
+      © 2026 Rohit Singh. All Rights Reserved.
+
+    </div>
+
   </footer>
 
-  <!-- JS -->
+
+
+
+
+  <!-- ================= SCRIPTS ================= -->
+
   <script src="assets/js/main.js"></script>
 
+  <script src="assets/js/reveal.js"></script>
+
 </body>
+
 </html>
-
-
-
-
-
-
